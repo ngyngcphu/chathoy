@@ -57,6 +57,8 @@ jobs:
                   echo $CR_PAT | docker login ${{ env.REGISTRY }} -u ${{ env.CD_USERNAME }} --password-stdin
                   docker pull ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}
 
+                  mkdir -p ChatHoy-server
+                  cd ChatHoy-server
                   curl https://raw.githubusercontent.com/ngyngcphu/chathoy_version_ci-cd/main/docker-compose.yml -o docker-compose.yml
                   docker compose down chathoy_version_ci-cd
                   docker compose up -d chathoy_version_ci-cd

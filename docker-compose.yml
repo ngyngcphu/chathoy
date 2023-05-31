@@ -7,6 +7,3 @@ services:
       - 3000:3000
     container_name: chathoy-backend
     restart: always
-    volumes:
-      - ./signaling-server:/backend
-      - /backend/node_modules
