@@ -55,6 +55,7 @@ jobs:
                 script: |
                   export CR_PAT=${{ secrets.GITHUB_TOKEN }}
                   echo $CR_PAT | docker login ${{ env.REGISTRY }} -u ${{ env.CD_USERNAME }} --password-stdin
+                  docker rmi -f ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}
                   docker pull ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}
 
                   mkdir -p ChatHoy-server
