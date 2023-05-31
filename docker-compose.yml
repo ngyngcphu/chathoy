@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  backend:
+    image: chathoy-backend
+    build:
+      context: ./signaling-server
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    container_name: chathoy-backend
+    restart: always
+    volumes:
+      - ./signaling-server:/backend
+      - /backend/node_modules
