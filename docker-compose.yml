@@ -4,7 +4,7 @@ services:
   backend:
     image: chathoy-backend
     build:
-      context: ./signaling-server
+      context: .
       dockerfile: Dockerfile
     ports:
       - 3000:3000

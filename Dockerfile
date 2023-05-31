@@ -2,10 +2,10 @@ FROM node:18-alpine
 
 WORKDIR /backend
 
-COPY package*.json ./
+COPY ./signaling-server/package*.json ./
 
 RUN npm install --production
 
-COPY . .
+COPY ./signaling-server .
 
 CMD ["node", "index.js"]
