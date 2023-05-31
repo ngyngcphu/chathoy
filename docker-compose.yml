@@ -1,7 +1,7 @@
 version: '3.8'
 
 services:
-  backend:
+  chathoy_version_ci-cd:
     image: ghcr.io/ngyngcphu/chathoy_version_ci-cd:0.1.0
     ports:
       - 3000:3000
