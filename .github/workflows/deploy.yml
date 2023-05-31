@@ -36,7 +36,7 @@ jobs:
         -   name: Build and push
             uses: docker/build-push-action@v3
             with:
-                context: ./signaling-ser
+                context: .
                 push: true
                 tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}
   deploy:
