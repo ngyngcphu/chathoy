@@ -11,7 +11,7 @@ env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ngyngcphu/chathoy_version_ci-cd
   IMAGE_TAG: 0.1.0
-  CD_USERNAME: ngyngcphu
+  CD_USERNAME: ${{ github.actor }}
 
 permissions:
   packages: write
