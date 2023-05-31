@@ -2,10 +2,7 @@ version: '3.8'
 
 services:
   backend:
-    image: chathoy-backend
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: ghcr.io/ngyngcphu/chathoy_version_ci-cd:0.1.0
     ports:
       - 3000:3000
     container_name: chathoy-backend
