@@ -11,7 +11,7 @@ env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ngyngcphu/chathoy_version_ci-cd
   IMAGE_TAG: 0.1.0
-  CD_USERNAME: ${{ github.actor }}
+  CD_USERNAME: ngyngcphu
 
 permissions:
   packages: write
@@ -19,7 +19,6 @@ jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
-    if: ${{ github.actor != 'dependabot[bot]' }}
     steps:
         -   name: Checkout
             uses: actions/checkout@v3
@@ -43,7 +42,6 @@ jobs:
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
-    if: ${{ github.actor != 'dependabot[bot]' }}
     needs: [build]
     steps:
         -   name: Deploy
@@ -55,7 +53,6 @@ jobs:
                 password: ${{ secrets.VPS_PASSWORD }}
                 
                 script: |
-                  whoami
                   export CR_PAT=${{ secrets.GITHUB_TOKEN }}
                   echo $CR_PAT | docker login ${{ env.REGISTRY }} -u ${{ env.CD_USERNAME }} --password-stdin
                   docker pull ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}

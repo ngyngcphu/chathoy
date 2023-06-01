@@ -9,6 +9,7 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
+    open-pull-requests-limit: 0
     target-branch: main
 
   - package-ecosystem: "npm"
@@ -20,6 +21,7 @@ updates:
     commit-message:
       prefix: "npm"
       include: "scope"
+    open-pull-requests-limit: 0
     target-branch: main
 
   - package-ecosystem: "docker"
@@ -29,4 +31,5 @@ updates:
     commit-message:
       prefix: "docker"
       include: "scope"
+    open-pull-requests-limit: 0
     target-branch: main
