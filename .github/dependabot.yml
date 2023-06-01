@@ -12,7 +12,7 @@ updates:
     target-branch: main
 
   - package-ecosystem: "npm"
-    directory: "/signaling-server"
+    directory: "/"
     schedule:
       interval: "daily"
     allow:
