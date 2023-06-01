@@ -9,6 +9,7 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
+    open-pull-requests-limit: 0
     target-branch: main
 
   - package-ecosystem: "npm"
@@ -17,10 +18,12 @@ updates:
       interval: "daily"
     allow:
       - dependency-name: "socket.io"
+    open-pull-requests-limit: 0
     target-branch: main
 
   - package-ecosystem: "docker"
     directory: "/"
     schedule:
       interval: "daily"
+    open-pull-requests-limit: 0
     target-branch: main
