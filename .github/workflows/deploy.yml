@@ -3,8 +3,6 @@ name: chathoy
 on:
   push:
       branches: ["main"]
-  pull_request:
-      branches: ["main"]
       paths-ignore:
           - 'README.md'
 env:
