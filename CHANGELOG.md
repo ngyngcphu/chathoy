@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/ngyngcphu/ChatHoy_version_CI-CD/compare/v1.0.0...v1.0.1) (2023-06-01)
+
+
+### Bug Fixes
+
+* change tag in docker image ([12368ca](https://github.com/ngyngcphu/ChatHoy_version_CI-CD/commit/12368caf8bc4b82fc900dd7d2e4bf63d0e3d6032))
+
 ## 1.0.0 (2023-06-01)
 
 
