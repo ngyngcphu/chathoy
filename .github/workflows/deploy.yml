@@ -53,6 +53,7 @@ jobs:
                 password: ${{ secrets.VPS_PASSWORD }}
                 
                 script: |
+                  whoami
                   export CR_PAT=${{ secrets.GITHUB_TOKEN }}
                   echo $CR_PAT | docker login ${{ env.REGISTRY }} -u ${{ env.CD_USERNAME }} --password-stdin
                   docker pull ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}
