@@ -8,15 +8,30 @@ on:
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ngyngcphu/chathoy_version_ci-cd
-  IMAGE_TAG: 0.1.0
   CD_USERNAME: ngyngcphu
 
 permissions:
+  contents: write
+  pull-requests: write
   packages: write
 jobs:
+  release:
+    runs-on: ubuntu-latest
+    outputs:
+      build: ${{ steps.release.outputs.release_created }}
+      tag_name: ${{ steps.release.outputs.tag_name }}
+    steps:
+      - uses: google-github-actions/release-please-action@v3
+        id: release
+        with:
+          release-type: node
+          pull-request-header: "Bot (:robot:) requested to create a new release on ${{ github.ref_name }}"
+
   build:
     name: Build
+    needs: [release]
     runs-on: ubuntu-latest
+    if: ${{ needs.release.outputs.build == 'true' }}
     steps:
         -   name: Checkout
             uses: actions/checkout@v3
@@ -36,7 +51,7 @@ jobs:
             with:
                 context: .
                 push: true
-                tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}
+                tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ needs.release.outputs.tag_name }}, ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
@@ -53,7 +68,7 @@ jobs:
                 script: |
                   export CR_PAT=${{ secrets.GITHUB_TOKEN }}
                   echo $CR_PAT | docker login ${{ env.REGISTRY }} -u ${{ env.CD_USERNAME }} --password-stdin
-                  docker pull ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}
+                  docker pull ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
 
                   mkdir -p ChatHoy-server
                   cd ChatHoy-server
