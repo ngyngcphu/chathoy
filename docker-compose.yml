@@ -1,7 +1,7 @@
 version: '3.8'
 
 services:
-  chathoy_version_ci-cd:
+  chathoy:
     image: ghcr.io/ngyngcphu/chathoy:latest
     ports:
       - 3000:3000
