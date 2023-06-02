@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/ngyngcphu/chathoy/compare/v1.1.1...v1.2.0) (2023-06-02)
+
+
+### Features
+
+* release production ([13f03f4](https://github.com/ngyngcphu/chathoy/commit/13f03f40afe9472f6d39268894a4768a3a698c5b))
+
 ## [1.1.1](https://github.com/ngyngcphu/chathoy/compare/v1.1.0...v1.1.1) (2023-06-02)
 
 
