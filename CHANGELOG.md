@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/ngyngcphu/ChatHoy_version_CI-CD/compare/v1.0.1...v1.0.2) (2023-06-02)
+
+
+### Bug Fixes
+
+* **release:** add version field in package.json ([b2e9e79](https://github.com/ngyngcphu/ChatHoy_version_CI-CD/commit/b2e9e79cbe8094b017a9309766d004c3be62d9d0))
+
 ## [1.0.1](https://github.com/ngyngcphu/ChatHoy_version_CI-CD/compare/v1.0.0...v1.0.1) (2023-06-01)
 
 
