@@ -1,6 +1,5 @@
 {
-  "name": "signaling-server",
-  "version": "1.0.1",
+  "name": "chathoy",
   "description": "",
   "main": "index.js",
   "scripts": {
