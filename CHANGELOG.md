@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/ngyngcphu/chathoy/compare/v1.0.2...v1.1.0) (2023-06-02)
+
+
+### Features
+
+* update name of package ([be458f8](https://github.com/ngyngcphu/chathoy/commit/be458f8591a54953e2dc3cfc3318f27a3974e5c8))
+
 ## [1.0.2](https://github.com/ngyngcphu/ChatHoy_version_CI-CD/compare/v1.0.1...v1.0.2) (2023-06-02)
 
 
