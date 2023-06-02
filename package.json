@@ -1,13 +1,13 @@
 {
   "name": "chathoy",
   "version": "1.0.2",
-  "description": "",
+  "description": "version ci-cd of chathoy TickLab-Challenge",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["ci-cd", "auto-release", "auto-update-dependencies"],
+  "author": "ngyngcphu",
   "license": "ISC",
   "dependencies": {
     "socket.io": "^4.5.1"

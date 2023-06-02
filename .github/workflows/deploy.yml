@@ -7,7 +7,7 @@ on:
           - 'README.md'
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: ngyngcphu/chathoy_version_ci-cd
+  IMAGE_NAME: ngyngcphu/chathoy
   CD_USERNAME: ngyngcphu
 
 permissions:
@@ -73,8 +73,8 @@ jobs:
 
                   mkdir -p ChatHoy-server
                   cd ChatHoy-server
-                  curl https://raw.githubusercontent.com/ngyngcphu/chathoy_version_ci-cd/main/docker-compose.yml -o docker-compose.yml
-                  docker compose stop chathoy_version_ci-cd
-                  docker compose rm -f chathoy_version_ci-cd
-                  docker compose up -d chathoy_version_ci-cd
+                  curl https://raw.githubusercontent.com/ngyngcphu/chathoy/main/docker-compose.yml -o docker-compose.yml
+                  docker compose stop chathoy
+                  docker compose rm -f chathoy
+                  docker compose up -d chathoy
                   docker logout ${{ env.REGISTRY }}
