@@ -1,1 +1,1 @@
-# ChatHoy version CI/CD .
+# ChatHoy.
