@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/ngyngcphu/chathoy/compare/v1.1.0...v1.1.1) (2023-06-02)
+
+
+### Bug Fixes
+
+* change docker service ([fd1c3c6](https://github.com/ngyngcphu/chathoy/commit/fd1c3c63eb89b7d3c10cb48bbc37efd0580b588a))
+
 ## [1.1.0](https://github.com/ngyngcphu/chathoy/compare/v1.0.2...v1.1.0) (2023-06-02)
 
 
