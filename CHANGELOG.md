@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.8](https://github.com/ngyngcphu/chathoy/compare/v1.2.7...v1.2.8) (2023-06-04)
+
+
+### Bug Fixes
+
+* test reloading nginx ([9032317](https://github.com/ngyngcphu/chathoy/commit/903231761a35c630953a66055ac23a6f2b94e360))
+
 ## [1.2.7](https://github.com/ngyngcphu/chathoy/compare/v1.2.6...v1.2.7) (2023-06-04)
 
 
