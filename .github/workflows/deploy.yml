@@ -65,8 +65,8 @@ jobs:
                 port: ${{ secrets.VPS_PORT }}
                 username: ${{ secrets.VPS_USERNAME }}
                 password: ${{ secrets.VPS_PASSWORD }}
-                source: "ui/index.html,ui/index.css"
-                target: "/var/www/chathoy/html"
+                source: "chathoy/index.html,chathoy/index.css"
+                target: "/var/www"
                 strip_components: 1
 
         -   name: Copy nginx config
@@ -76,7 +76,7 @@ jobs:
                 port: ${{ secrets.VPS_PORT }}
                 username: ${{ secrets.VPS_USERNAME }}
                 password: ${{ secrets.VPS_PASSWORD }}
-                source: "ui/chathoy"
+                source: "chathoy/chathoy"
                 target: "/etc/nginx/sites-enabled"
 
         -   name: Deploy backend
