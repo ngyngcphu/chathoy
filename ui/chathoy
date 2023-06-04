@@ -3,7 +3,7 @@ server {
         listen 80;
         listen [::]:80;
 
-        root /var/www/chathoy;
+        root /var/www/chathoy/html;
         index index.html index.htm index.nginx-debian.html;
 
         server_name chathoy-client.tickflow.net;

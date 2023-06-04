@@ -65,8 +65,9 @@ jobs:
                 port: ${{ secrets.VPS_PORT }}
                 username: ${{ secrets.VPS_USERNAME }}
                 password: ${{ secrets.VPS_PASSWORD }}
-                source: "./index.html,./index.css"
-                target: "/var/www/chathoy"
+                source: "ui/index.html,ui/index.css"
+                target: "/var/www/chathoy/html"
+                strip_components: 1
 
         -   name: Copy nginx config
             uses: appleboy/scp-action@master
@@ -75,7 +76,7 @@ jobs:
                 port: ${{ secrets.VPS_PORT }}
                 username: ${{ secrets.VPS_USERNAME }}
                 password: ${{ secrets.VPS_PASSWORD }}
-                source: "./chathoy"
+                source: "ui/chathoy"
                 target: "/etc/nginx/sites-enabled"
 
         -   name: Deploy backend
