@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.5](https://github.com/ngyngcphu/chathoy/compare/v1.2.4...v1.2.5) (2023-06-04)
+
+
+### Bug Fixes
+
+* add step checkout in deploy workflow ([b6cdf2c](https://github.com/ngyngcphu/chathoy/commit/b6cdf2c8db05c8377ccb30a7767ee1c208dc733d))
+
 ## [1.2.4](https://github.com/ngyngcphu/chathoy/compare/v1.2.3...v1.2.4) (2023-06-04)
 
 
