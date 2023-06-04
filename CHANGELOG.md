@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/ngyngcphu/chathoy/compare/v1.2.8...v1.3.0) (2023-06-04)
+
+
+### Features
+
+* update readme to chathoy ([18052d3](https://github.com/ngyngcphu/chathoy/commit/18052d3e4ae09ccd493495b57908b300afa51ca1))
+
 ## [1.2.8](https://github.com/ngyngcphu/chathoy/compare/v1.2.7...v1.2.8) (2023-06-04)
 
 
