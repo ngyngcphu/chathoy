@@ -53,8 +53,8 @@ jobs:
                 context: .
                 push: true
                 tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ needs.release.outputs.tag_name }}, ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
-  deploy:
-    name: Deploy
+  copy-html:
+    name: Copy HTML
     runs-on: ubuntu-latest
     needs: [build]
     steps:
@@ -70,6 +70,13 @@ jobs:
                 password: ${{ secrets.VPS_PASSWORD }}
                 source: "index.html,index.css"
                 target: "/var/www/chathoy/html"
+  copy-nginx:
+    name: Copy nginx
+    runs-on: ubuntu-latest
+    needs: [copy-html]
+    steps:
+        -   name: Checkout
+            uses: actions/checkout@v3
 
         -   name: Copy nginx config
             uses: appleboy/scp-action@master
@@ -81,6 +88,11 @@ jobs:
                 source: "chathoy-nginx.config"
                 target: "/etc/nginx/sites-enabled"
 
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    needs: [copy-nginx]
+    steps:
         -   name: Deploy backend
             uses: appleboy/ssh-action@master
             with:
