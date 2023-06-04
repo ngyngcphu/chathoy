@@ -1,0 +1,25 @@
+# Nginx Config
+server {
+        listen 80;
+        listen [::]:80;
+
+        root /var/www/chathoy/html;
+        index index.html index.htm index.nginx-debian.html;
+
+        server_name chathoy-client.tickflow.net;
+
+        location / {
+                try_files $uri $uri/ =404;
+        }
+}
+
+server {
+	listen 80;
+	server_name chathoy-server.tickflow.net;
+
+	location / {
+		proxy_pass http://127.0.0.1:3000;
+        	proxy_set_header Host $host;
+        	proxy_set_header X-Real-IP $remote_addr;
+	}
+}

@@ -58,7 +58,27 @@ jobs:
     runs-on: ubuntu-latest
     needs: [build]
     steps:
-        -   name: Deploy
+        -   name: Copy static html file
+            uses: appleboy/scp-action@master
+            with:
+                host: ${{ secrets.VPS_HOST }}
+                port: ${{ secrets.VPS_PORT }}
+                username: ${{ secrets.VPS_USERNAME }}
+                password: ${{ secrets.VPS_PASSWORD }}
+                source: "./index.html,./index.css"
+                target: "/var/www/chathoy/html"
+
+        -   name: Copy nginx config
+            uses: appleboy/scp-action@master
+            with:
+                host: ${{ secrets.VPS_HOST }}
+                port: ${{ secrets.VPS_PORT }}
+                username: ${{ secrets.VPS_USERNAME }}
+                password: ${{ secrets.VPS_PASSWORD }}
+                source: "./chathoy"
+                target: "/etc/nginx/sites-enabled"
+
+        -   name: Deploy backend
             uses: appleboy/ssh-action@master
             with:
                 host: ${{ secrets.VPS_HOST }}
@@ -67,6 +87,10 @@ jobs:
                 password: ${{ secrets.VPS_PASSWORD }}
                 
                 script: |
+                  export SUDO=${{ secrets.VPS_PASSWORD }}
+                  echo $SUDO | sudo nginx -t
+                  echo $SUDO | sudo service nginx reload
+
                   export CR_PAT=${{ secrets.GITHUB_TOKEN }}
                   echo $CR_PAT | docker login ${{ env.REGISTRY }} -u ${{ env.CD_USERNAME }} --password-stdin
                   docker pull ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
