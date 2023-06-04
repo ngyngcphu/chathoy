@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/ngyngcphu/chathoy/compare/v1.2.0...v1.2.1) (2023-06-04)
+
+
+### Bug Fixes
+
+* automate deploy frontend ([ce22a12](https://github.com/ngyngcphu/chathoy/commit/ce22a12a23af34eacbb6317afcd6f19e62110877))
+
 ## [1.2.0](https://github.com/ngyngcphu/chathoy/compare/v1.1.1...v1.2.0) (2023-06-02)
 
 
