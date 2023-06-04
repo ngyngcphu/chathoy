@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.7](https://github.com/ngyngcphu/chathoy/compare/v1.2.6...v1.2.7) (2023-06-04)
+
+
+### Bug Fixes
+
+* fix name of nginx config file ([e43a061](https://github.com/ngyngcphu/chathoy/commit/e43a061b4557989c6231ec403b9c172710d625c0))
+
 ## [1.2.6](https://github.com/ngyngcphu/chathoy/compare/v1.2.5...v1.2.6) (2023-06-04)
 
 
