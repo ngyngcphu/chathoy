@@ -1,6 +1,6 @@
 {
   "name": "chathoy",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "version ci-cd of chathoy TickLab-Challenge",
   "main": "index.js",
   "scripts": {
