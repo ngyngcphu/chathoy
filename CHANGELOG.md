@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.3](https://github.com/ngyngcphu/chathoy/compare/v1.2.2...v1.2.3) (2023-06-04)
+
+
+### Bug Fixes
+
+* compress html file in ui folder ([50633cb](https://github.com/ngyngcphu/chathoy/commit/50633cbacfc1af648c383075c8dca8c27668ed9c))
+
 ## [1.2.2](https://github.com/ngyngcphu/chathoy/compare/v1.2.1...v1.2.2) (2023-06-04)
 
 
