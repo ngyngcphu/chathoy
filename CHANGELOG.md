@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.6](https://github.com/ngyngcphu/chathoy/compare/v1.2.5...v1.2.6) (2023-06-04)
+
+
+### Bug Fixes
+
+* separate step of scp ([c3a3352](https://github.com/ngyngcphu/chathoy/commit/c3a3352ecfe3bba581dbc051e47b196de9107663))
+
 ## [1.2.5](https://github.com/ngyngcphu/chathoy/compare/v1.2.4...v1.2.5) (2023-06-04)
 
 
