@@ -1,4 +1,4 @@
-name: chathoy
+name: deploy and release
 
 on:
   push:
