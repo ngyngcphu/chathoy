@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.2](https://github.com/ngyngcphu/chathoy/compare/v1.2.1...v1.2.2) (2023-06-04)
+
+
+### Bug Fixes
+
+* change target path in step copy html file ([8d194f3](https://github.com/ngyngcphu/chathoy/commit/8d194f3be62abc7fcc6a41de4f47a3be2ad859d9))
+
 ## [1.2.1](https://github.com/ngyngcphu/chathoy/compare/v1.2.0...v1.2.1) (2023-06-04)
 
 
