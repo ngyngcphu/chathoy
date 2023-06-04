@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.4](https://github.com/ngyngcphu/chathoy/compare/v1.2.3...v1.2.4) (2023-06-04)
+
+
+### Bug Fixes
+
+* change compress folder from ui to chathoy ([f821e00](https://github.com/ngyngcphu/chathoy/commit/f821e00fef5a0d4bf0233e6c198d0cce098e64ef))
+
 ## [1.2.3](https://github.com/ngyngcphu/chathoy/compare/v1.2.2...v1.2.3) (2023-06-04)
 
 
